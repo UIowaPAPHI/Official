@@ -10,11 +10,7 @@
 
 #mainBg {
   width:100%;
-  height:100%;
-  position: fixed;
-  top:0;
-  left:0;
-  background-color: #f9f2b6;
+  background-color: #f9f6d6;
   opacity: .9;
 }
 
