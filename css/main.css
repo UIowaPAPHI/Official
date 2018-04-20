@@ -5,11 +5,9 @@
   position: fixed;
   top:0;
   left:0;
-  background-color: #003262;
+  background: #003262 url("public/images/UIowaPAPHILogo.png") no-repeat fixed;
 }
-#mainBg {
-  background: url("public/images/UIowaPAPHILogo.png") no-repeat;
-}
+
 body {
   background: #f9f6d6;
   opacity: .9;
