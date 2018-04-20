@@ -7,13 +7,8 @@
   background-color: #003262;
 }
 
-#mainBg {
-  width:100%;
-  background-color: #f9f6d6;
-  opacity: .9;
-}
-
 body {
-  background: url("public/images/UIowaPAPHILogo.png") no-repeat;
+  background: #f9f6d6 url("public/images/UIowaPAPHILogo.png") no-repeat;
+  opacity: .9;
 }
 
