@@ -2,13 +2,16 @@
 #header{
   width:100%;
   height: 20%;
+  position: fixed;
   top:0;
   left:0;
   background-color: #003262;
 }
-
+#mainBg {
+  background: url("public/images/UIowaPAPHILogo.png") no-repeat
+}
 body {
-  background: #f9f6d6 url("public/images/UIowaPAPHILogo.png") no-repeat;
+  background: #f9f6d6;
   opacity: .9;
 }
 
