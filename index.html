@@ -1,51 +1,21 @@
 <!DOCTYPE html>
 <html>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
 <head>
-    <title>UIowa Pi Alpha Phi</title>
-    <!-- link to main stylesheet -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <div w3-include-html="headLinks.html"></div>
 </head>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <body>
 
-
-<div id="header">
-test header location
-</div>
-<div id="mainBg" style="overflow:auto;">
-    <div class="nav-side-menu">
-        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
-        <div class="menu-list">
-
-            <ul id="menu-content">
-                <li>
-                    <a href="#">
-                        <i class="fa fa-dashboard fa-lg"></i> Home
-                    </a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#products" class="collapsed active">
-                    <a href="allBrothers.html"><i class="fa fa-gift fa-lg"></i> All Brothers <span class="arrow"></span></a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#service" class="collapsed">
-                    <a href="history.html"><i class="fa fa-globe fa-lg"></i> History <span class="arrow"></span></a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
-                    <a href="contactUs.html"><i class="fa fa-car fa-lg"></i> Contact Us <span class="arrow"></span></a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</div>
+<div w3-include-html="header.html"></div>
+<div w3-include-html="navbar.html"></div>
 
 </body>
 </html>
+
+<script>
+    w3IncludeHTML();
+</script>
