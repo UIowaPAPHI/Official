@@ -61,7 +61,7 @@
         <img hidden id="brothersBanner" src="public/images/brothersBanner.PNG">
     </div>
 
-    <div  id="brotherCarousel" class="carousel slide" data-ride="carousel">
+    <div hidden id="brotherCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#brothersCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#brothersCarousel" data-slide-to="1"></li>
@@ -211,7 +211,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="..." alt="SJeffrey Chan">
+                <img src="..." alt="Jeffrey Chan">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>#51 Jeffrey "iSO" Chan</h5>
                 </div>
@@ -228,6 +228,29 @@
     </div>
 </div>
 
+<div id="p4">
+    <div id="contactBannerContainer">
+        <div id="contactBanner"></div>
+    </div>
+    <div class="emails">
+        (Click buttons to copy emails)
+    </div>
+    <div class="emails">
+        <button style="margin-left:15%" class="emailButtons customText col-sm-2" onclick="copyToClipboard('president.uiowapaphi@gmail.com')">
+            <span><img src="public/images/brandLogoLinks.PNG"></span>President
+        </button>
+        <button class="emailButtons customText col-sm-2" onclick="copyToClipboard('vp.uiowapaphi@gmail.com')">
+            <span><img src="public/images/brandLogoLinks.PNG"></span>Vice President
+        </button>
+        <button class="emailButtons customText col-sm-2" onclick="copyToClipboard('treasurer.uiowapaphi@gmail.com')">
+            <span><img src="public/images/brandLogoLinks.PNG"></span>Treasurer
+        </button>
+        <button class="emailButtons customText col-sm-2" onclick="copyToClipboard('secretary.uiowapaphi@gmail.com')">
+            <span><img src="public/images/brandLogoLinks.PNG"></span>Secretary
+        </button>
+    </div>
+    <img id="contact" src="public/images/lineup.jpg" hidden>
+</div>
 </body>
 </html>
 
@@ -238,8 +261,10 @@
         var p1 = $("#p1");
         var p2 = $('#p2');
         var p3 = $('#p3');
+        var p4 = $('#p4');
         var p2Text = $("#p2Text");
         var historyBan = $("#historyBanner");
+        var contactBan = $('#contactBanner');
         var couchPic = $("#couch");
 
         p1.animate({height: '710px', opacity: '0.4'}, 2000);
@@ -267,15 +292,35 @@
             console.log((hT-wH) , wS);
             if (wS > (hT+hH-wH)){
                 p3.animate({width: '96%', opacity: '1'}, 50);
-                p3.animate({height: '1000px', opacity: '1'}, 50).promise().done(function() {
+                p3.animate({height: '850px', opacity: '1'}, 50).promise().done(function() {
                     $('#brothersBannerContainer').animate({width: '96%', opacity: '1'}, 800);
                     $('#brothersBanner').fadeIn(4000);
                     $('#brotherCarousel').fadeIn(3000);
                 });
             }
         });
-    });
 
+        $(window).scroll(function() {
+            var hT = p4.offset().top,
+                hH = p4.outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            console.log((hT-wH) , wS);
+            if (wS > (hT+hH-wH)){
+                p4.animate({width: '96%', opacity: '1'}, 50);
+                p4.animate({height: '600px', opacity: '1'}, 50).promise().done(function() {
+                    $('#contactBannerContainer').animate({width: '100%', opacity: '1'}, 800);
+                    loadImage("public/images/contactUsBanner.png", "contactBanner");
+                    contactBan.animate({height: '100px', opacity: '0.4'}, 1000);
+                    contactBan.animate({width: '80%', opacity: '1'}, 2000).promise().done( function() {
+                        $('.emails').fadeIn(2500);
+                        $('.emailButtons').fadeIn(3000);
+                        $('#contact').fadeIn(3000);
+                    });
+                });
+            }
+        });
+    });
 
 
     function loadImage(src, div) {
@@ -294,6 +339,14 @@
     }
 
     $('#brotherCarousel').carousel({
-        interval: 2000
-    })
+        interval: 10000
+    });
+
+    function copyToClipboard(email) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val(email).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
 </script>
