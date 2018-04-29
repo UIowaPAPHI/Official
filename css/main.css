@@ -1,3 +1,8 @@
+
+body {
+    background: #f9f6d6;
+}
+
 #p1 {
     padding-top:5%;
     width:5px;
@@ -9,6 +14,12 @@
     text-align: center;
 }
 
+/* display the logo inline so it is centered */
+#mainLogo {
+    display: block;
+    margin: auto;
+}
+
 #p2 {
     margin-top: 50px;
     margin-left: 2%;
@@ -17,8 +28,8 @@
 
 #couch {
     width: 800px;
-    height: 600px;
-    margin-top: 10px;
+    height: 580px;
+    margin-top: 25px;
 }
 #p2Text {
     display:none;
@@ -49,6 +60,28 @@
 #historyBannerContainer {
     width:1px;
     background-color: #FEB81A;
+}
+
+
+#p3 {
+    height: 1px;
+    margin-top: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#brothersBannerContainer {
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    width:1px;
+    border-top: 3px solid #041E42;
+    border-bottom: 3px solid #FEB81A;
+}
+
+#brothersBanner {
+    position:relative;
+    margin: auto;
 }
 .customText {
     font-family: "Times New Roman", sans-serif;
@@ -84,16 +117,6 @@
 #header {
     padding: 0;
     background: #041E42;
-}
-
-/* display the logo inline so it is centered */
-#mainLogo {
-    display: block;
-    margin: auto;
-}
-
-body {
-    background: #f9f6d6;
 }
 
 /* contains the navbar and contents of the page.

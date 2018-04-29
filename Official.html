@@ -18,8 +18,8 @@
 <body style="overflow: auto">
 <div id="p1">
     <div id="mainLogo"></div>
-    <h1 class="customText">Welcome</h1>
-    <div><span class="glyphicon glyphicon-chevron-down" style="color:white"></span></div>
+    <h1 hidden class="customText welcome">Welcome</h1>
+    <div class="welcome" hidden><span class="glyphicon glyphicon-chevron-down" style="color:white"></span></div>
 </div>
 
 <div id="p2">
@@ -61,6 +61,90 @@
     </div>
 </div>
 
+<div id="p3">
+    <div id="brothersBannerContainer">
+        <img hidden id="brothersBanner" src="public/images/brothersBanner.PNG">
+    </div>
+
+    <div id="brotherCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#0" data-slide-to="0" class="active"></li>
+            <li data-target="#1" data-slide-to="1"></li>
+            <li data-target="#2" data-slide-to="2"></li>
+            <li data-target="#3" data-slide-to="3"></li>
+            <li data-target="#4" data-slide-to="4"></li>
+            <li data-target="#5" data-slide-to="5"></li>
+            <li data-target="#6" data-slide-to="6"></li>
+            <li data-target="#7" data-slide-to="7"></li>
+            <li data-target="#8" data-slide-to="8"></li>
+            <li data-target="#9" data-slide-to="9"></li>
+
+            <li data-target="#0" data-slide-to="10"></li>
+            <li data-target="#1" data-slide-to="11"></li>
+            <li data-target="#2" data-slide-to="12"></li>
+            <li data-target="#3" data-slide-to="13"></li>
+            <li data-target="#4" data-slide-to="14"></li>
+            <li data-target="#5" data-slide-to="15"></li>
+            <li data-target="#6" data-slide-to="16"></li>
+            <li data-target="#7" data-slide-to="17"></li>
+            <li data-target="#8" data-slide-to="18"></li>
+            <li data-target="#9" data-slide-to="19"></li>
+
+            <li data-target="#0" data-slide-to="20"></li>
+            <li data-target="#1" data-slide-to="21"></li>
+            <li data-target="#2" data-slide-to="22"></li>
+            <li data-target="#3" data-slide-to="23"></li>
+            <li data-target="#4" data-slide-to="24"></li>
+            <li data-target="#5" data-slide-to="25"></li>
+            <li data-target="#6" data-slide-to="26"></li>
+            <li data-target="#7" data-slide-to="27"></li>
+            <li data-target="#8" data-slide-to="28"></li>
+            <li data-target="#9" data-slide-to="29"></li>
+
+            <li data-target="#0" data-slide-to="30"></li>
+            <li data-target="#1" data-slide-to="31"></li>
+            <li data-target="#2" data-slide-to="32"></li>
+            <li data-target="#3" data-slide-to="33"></li>
+            <li data-target="#4" data-slide-to="34"></li>
+            <li data-target="#5" data-slide-to="35"></li>
+            <li data-target="#6" data-slide-to="36"></li>
+            <li data-target="#7" data-slide-to="37"></li>
+            <li data-target="#8" data-slide-to="38"></li>
+            <li data-target="#9" data-slide-to="39"></li>
+
+            <li data-target="#0" data-slide-to="40"></li>
+            <li data-target="#1" data-slide-to="41"></li>
+            <li data-target="#2" data-slide-to="42"></li>
+            <li data-target="#3" data-slide-to="43"></li>
+            <li data-target="#4" data-slide-to="44"></li>
+            <li data-target="#5" data-slide-to="45"></li>
+            <li data-target="#6" data-slide-to="46"></li>
+            <li data-target="#7" data-slide-to="47"></li>
+            <li data-target="#8" data-slide-to="48"></li>
+            <li data-target="#9" data-slide-to="49"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="..." alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
 </body>
 </html>
 
@@ -69,14 +153,17 @@
 
     $(document).ready(function () {
         var p1 = $("#p1");
+        var p2 = $('#p2');
+        var p3 = $('#p3');
         var p2Text = $("#p2Text");
         var historyBan = $("#historyBanner");
         var couchPic = $("#couch");
 
         p1.animate({height: '710px', opacity: '0.4'}, 2000);
+        $('.welcome').fadeIn(9500);
         p1.animate({width: '96%', opacity: '1'}, 2500).promise().done( function() {
-            $('#p2').animate({height: '1000px', opacity: '1'}, 100);
-            $('#historyBannerContainer').animate({width: '100%', opacity: '1'}, 1000);
+            p2.animate({height: '800px', opacity: '1'}, 100);
+            $('#historyBannerContainer').animate({width: '68%', opacity: '1'}, 800);
             loadImage("public/images/historyBanner.png", "historyBanner");
             historyBan.animate({height: '100px', opacity: '0.4'}, 2000);
             historyBan.animate({width: '80%', opacity: '0.8'}, 2500);
@@ -88,7 +175,24 @@
 
         });
         loadImage("public/images/UIowaPAPHILogo.png", "mainLogo");
+
+        $(window).scroll(function() {
+            var hT = p3.offset().top,
+                hH = p3.outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            console.log((hT-wH) , wS);
+            if (wS > (hT+hH-wH)){
+                p3.animate({width: '96%', opacity: '1'}, 50);
+                p3.animate({height: '800px', opacity: '1'}, 50).promise().done(function() {
+                    $('#brothersBannerContainer').animate({width: '96%', opacity: '1'}, 800);
+                    $('#brothersBanner').fadeIn(4000);
+                });
+            }
+        });
     });
+
+
 
     function loadImage(src, div) {
         image = new Image();
