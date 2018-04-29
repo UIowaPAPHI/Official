@@ -237,7 +237,6 @@
     </div>
 </div>
 
-
 <div class="col-lg-12">
     <div id="p4">
         <div class="col=md-12" id="contactBannerContainer">
@@ -321,15 +320,13 @@
                     $('#brotherCarousel').fadeIn(3000);
                 });
             }
-        });
 
-        $(window).scroll(function() {
-            var hT = p4.offset().top,
-                hH = p4.outerHeight(),
-                wH = $(window).height(),
-                wS = $(this).scrollTop();
-            console.log((hT-wH) , wS);
-            if (wS > (hT+hH-wH)){
+            var hTT = p4.offset().top,
+                hHH = p4.outerHeight(),
+                wHH = $(window).height(),
+                wSS = $(this).scrollTop();
+            console.log((hTT-wHH) , wSS);
+            if (wS > (hTT+hHH-wHH)){
                 p4.animate({width: '96%', opacity: '1'}, 50);
                 p4.animate({height: '800px', opacity: '1'}, 50).promise().done(function() {
                     $('#contactBannerContainer').animate({width: '100%', opacity: '1'}, 800);
