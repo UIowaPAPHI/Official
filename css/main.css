@@ -1,9 +1,10 @@
-
+/* header that contains the main paphi pi chapter logo created by khang bui */
 #header {
     padding: 0;
     background: #041E42;
 }
 
+/* display the logo inline so it is centered */
 #mainLogo {
     display: block;
     margin: auto;
@@ -13,31 +14,25 @@ body {
     background: #f9f6d6;
 }
 
+/* display the text on the history page so it is center and aligned center */
 #historyText{
-    left:30%;
+    left: 30%;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
 }
+
+/* contains the navbar and contents of the page.
+ the wrapper should stretch to fit the full length of the page*/
 .wrapper {
     display: flex;
     align-items: stretch;
-}
-
-/* Shrinking the sidebar from 250px to 80px and center aligining its content*/
-#sidebar.active {
-    min-width: 80px;
-    max-width: 80px;
-    text-align: center;
 }
 
 #sidebar ul li a {
     text-align: left;
 }
 
-/*
-    ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
-*/
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 p {
@@ -47,12 +42,15 @@ p {
     line-height: 1.7em;
 }
 
+/* sets the attributes for the hover and focus on anchor tags */
 a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
 }
 
+
+/*Main style for the navbar */
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
     background: #FEB81A;
