@@ -97,6 +97,7 @@ body {
 .carousel-inner > .item > img {
     height: 600px;
     margin:0 auto;
+    image-orientation: from-image;
 }
 
 
@@ -136,6 +137,15 @@ body {
     border-radius: 8px;
     background-color: #041E42;
 }
+
+.rotatePortraits {
+    transform: rotate(90deg);
+}
+
+.scaleDown {
+    transform: scale(.8);
+}
+
 .customText {
     font-family: "Times New Roman", sans-serif;
     color: white;
