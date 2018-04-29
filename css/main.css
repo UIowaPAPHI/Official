@@ -1,3 +1,85 @@
+#p1 {
+    padding-top:5%;
+    width:5px;
+    height: 5px;
+    margin-top: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background: #041E42;
+    text-align: center;
+}
+
+#p2 {
+    margin-top: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#couch {
+    width: 800px;
+    height: 600px;
+    margin-top: 10px;
+}
+#p2Text {
+    display:none;
+    margin-top:40px;
+    margin-left:10px;
+    width: 40%;
+    height: 550px;
+    border: 1px double #FEB81A;
+    /* RGBa with 0.8 opacity */
+    background-color: rgba(254, 184, 26, 0.8);
+}
+
+/* display the text on the history page so it is center and aligned center */
+#historyText {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#historyBanner {
+    height: 5px;
+    width: 5px;
+    position: relative;
+}
+
+#historyBannerContainer {
+    width:1px;
+    background-color: #FEB81A;
+}
+.customText {
+    font-family: "Times New Roman", sans-serif;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* header that contains the main paphi pi chapter logo created by khang bui */
 #header {
     padding: 0;
@@ -12,14 +94,6 @@
 
 body {
     background: #f9f6d6;
-}
-
-/* display the text on the history page so it is center and aligned center */
-#historyText{
-    left: 30%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
 }
 
 /* contains the navbar and contents of the page.
