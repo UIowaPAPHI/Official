@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>UIowa Pi Alpha Phi</title>
-    <!-- link to main stylesheet -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-</head>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+<div w3-include-html="headLinks.html"></div>
 <body>
-
-
-<div id="header">
-
+<div w3-include-html="header.html"></div>
+<div style="background-color: #041E42;border-top: 1px solid #FEB81A;border-bottom: 1px solid #041E42">
+    <img id="historyBanner" src="public/images/historyBanner.PNG">
 </div>
-<div id="mainBg" style="overflow:auto;">
-    <div class="nav-side-menu">
-        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+<div w3-include-html="navbar.html"></div>
 
-        <div class="menu-list">
+<div id="historyText" class="col-md-4">
+    <p>
+        The Pi Chapter of Pi Alpha Phi was colonized on September 10, 2011 and chartered on November
+        17, 2012.
+        The seven great men, Hakim Tatah, Anthony Dang, Yile Wu, Watson Feng, Brayden Zhao, Tony
+        Tran, and John Hartnett,
+        who founded the group strived to create a place where individuals could feel at home with
+        the people
+        they surrounded themselves with.
+    </p>
 
-            <ul id="menu-content">
-                <li>
-                    <a href="#">
-                        <i class="fa fa-dashboard fa-lg"></i> Dashboard
-                    </a>
-                </li>
+    <p>
+        They created this chapter with a focus on helping not only Asian males but
+        anyone who believed in becoming culturally aware of the campus around them. These founders
+        put an emphasis on
+        the national pillars and morals of achieving Academic Excellence, Asian American Awareness,
+        Leadership,
+        Philanthropy, and Brotherhood.
+    </p>
 
-                <li data-toggle="collapse" data-target="#products" class="collapsed active">
-                    <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#service" class="collapsed">
-                    <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
-                    <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fa fa-user fa-lg"></i> Profile
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fa fa-users fa-lg"></i> Users
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+    <p>
+        Today the Pi Chapter of Pi Alpha Phi Fraternity Inc. is home to a brotherhood that works
+        with student
+        organizations around campus to make the University of Iowa feel like a home to anyone who
+        needs it.
+        We encourages one another to succeed, give back to the community, and show everyone what it
+        means to be a gentleman
+        of Pi Alpha Phi.
+    </p>
 </body>
 </html>
+
+<script>
+    w3IncludeHTML();
+
+    $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+    });
+</script>

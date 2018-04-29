@@ -2,20 +2,26 @@
 <html>
 <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
-<head>
-    <div w3-include-html="headLinks.html"></div>
-</head>
-
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+<div w3-include-html="headLinks.html"></div>
 <body>
-
 <div w3-include-html="header.html"></div>
+<div style="background-color: #041E42;border-top: 1px solid #FEB81A;border-bottom: 1px solid #041E42">
+    <img id="homeBanner" src="public/images/homeBanner.PNG">
+</div>
 <div w3-include-html="navbar.html"></div>
-
+ THIS IS THE HOMEPAGE
 </body>
 </html>
 
 <script>
     w3IncludeHTML();
+
+    $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+    });
 </script>
